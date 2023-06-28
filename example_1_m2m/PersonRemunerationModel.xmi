@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<PersonRemuneration:PersonRemunerationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PersonRemuneration="http://it.gssi/person_remuneration/v1">
+  <persons firstName="Ludovico" lastName="Iovino">
+    <remuneration payment="300"/>
+  </persons>
+</PersonRemuneration:PersonRemunerationModel>

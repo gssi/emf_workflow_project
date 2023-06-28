@@ -1,0 +1,22 @@
+pre{
+	"Start ETL transformation".println();
+}
+
+rule Guest2PersonRemuneration
+	transform g : Guest!Guest
+	to p : PersonRemuneration!Person {
+	
+	p.firstName = g.firstName;
+	p.lastName = g.lastName;
+	var remuneration : new PersonRemuneration!Remuneration; 
+	remuneration.payment = g.remuneration.remunerationTotal;
+	p.remuneration = remuneration;
+}
+
+post {
+  // Put all produced Persons under a root Content element
+  var root : new PersonRemuneration!PersonRemunerationModel;
+  root.persons.addAll(PersonRemuneration!Person.all);
+  "Transformation ETL correctly executed!".println();
+}
+

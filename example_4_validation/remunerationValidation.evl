@@ -1,0 +1,12 @@
+context Remuneration {
+	constraint isEqualToZero {
+		check : self.remunerationTotal > 0
+		message : 'A remunaration cannot be 0 (zero)!'
+	}	
+	
+	constraint isReady {
+		check : self.status.name == 'ReadyToBeSent'
+		message : 'A remunaration it is not ready to be sent yet. ' 
+						+'The current status is: ' + self.status.name
+	}	
+}

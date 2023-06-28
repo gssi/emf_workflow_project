@@ -1,0 +1,40 @@
+<project default="main">
+  <target name="main">
+  <!--Load the UniversityOrganization model-->
+  <epsilon.emf.loadModel
+    name="UniversityOrganizationModel"
+    modelfile="UniversityOrganization.xmi"
+    metamodeluri="http://it.gssi/university_organization/v1"
+    read="true" store="false"/>
+  	
+  <!--Load the PersonRemunareation model-->
+  <epsilon.emf.loadModel name="PersonRemuneration"
+  	modelfile="example_1_m2m/PersonRemunerationModel.xmi"
+  	metamodeluri="http://it.gssi/person_remuneration/v1"
+  	read="false" store="true"/>
+  	
+  <!-- Validate UniversityOrganization Model-->
+  <epsilon.evl src="example_4_validation/remunerationValidation.evl">
+    <model ref="UniversityOrganizationModel"/>
+  </epsilon.evl>
+
+  <!--Run the Guest to Remuneration M2M transformation-->
+  <epsilon.etl
+    src="example_1_m2m/Guest2Remuneration.etl"> 
+    <model alias="Guest" ref="UniversityOrganizationModel"/>
+    <model alias="PersonRemuneration" ref="PersonRemuneration"/>
+  </epsilon.etl>
+
+  <!--Run the Guest to MailInvitation M2T transformation-->
+  <epsilon.egl src="example_3_m2t/guest2mailInvitation.egx"> 
+    <model ref="UniversityOrganizationModel"/>
+  </epsilon.egl>
+  	
+  	<!--Run External call for sending emails-->
+  <epsilon.eol src="example_5_external_service/mail_service.eol"> 
+  	 <model ref="UniversityOrganizationModel"/>
+  </epsilon.eol>
+  </target>
+</project>
+
+

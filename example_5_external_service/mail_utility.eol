@@ -1,0 +1,45 @@
+operation getGuestEmail(){
+	return FacultyMember.all.first().positions.first().guest.email;
+}
+
+
+operation getFacultyMemberUsername(){
+	return FacultyMember.all.first().firstName;
+}
+
+operation FacultyMember getBody(){
+	return "TO: \n
+Dr. " + self.positions.first().guest.firstName + " \n
+Via email: " + self.positions.first().guest.email + " \n
+
+CC: \n
+" + self.positions.first().guest.departmentDirector.titlePrefix.name + ". 
+" + self.positions.first().guest.departmentDirector.firstName + " " + self.positions.first().guest.departmentDirector.lastName + " \n
+Scientific Director of the " + self.positions.first().guest.departmentDirector.department.name + " \n
+Gran Sasso Science Institute, Italy  \n
+
+Subject: **Lecture**  \n
+
+Dear Dr. " + self.positions.first().guest.firstName + ", \n
+following the request of Adiel Tuyishime, approved by Scientific Director \n 
+of the Computer Science Scientific Area, I am very pleased to invite you \n
+to the Gran Sasso Science Institute (GSSI), L'Aquila, Italy, \n
+in data " + self.positions.first().guest.activity.first().time + " to run a scientific collaboration \n 
+on the following topic: \n
+
+
+**" + self.positions.first().guest.activity.first().topic + "** \n
+" + self.positions.first().guest.activity.first().abstract + "  \n
+
+Location: " + self.positions.first().guest.activity.first().venue + " \n  
+
+
+" + self.positions.first().guest.invitingPerson.firstName + " " + self.positions.first().guest.invitingPerson.lastName + ", \n
+
+L'Aquila, "+getCurrentTime()+" ";
+}
+
+operation getCurrentTime() {
+	var javaDate = new Native("java.util.Date");
+	return javaDate;
+}

@@ -1,0 +1,10 @@
+import "mail_utility.eol";
+
+var mailSenderHandler = new Native("emf_workflow_project.MailSenderService")
+								("MailSenderUsername", "MailSenderPassword");
+
+mailSenderHandler.sendEmail(getGuestEmail(), "Invitation mail for "+
+				FacultyMember.all.first().positions.first().guest.firstName, 
+				FacultyMember.all.first().getBody());
+
+

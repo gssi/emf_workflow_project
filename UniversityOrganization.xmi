@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UniversityOrganization:UniversityOrganizationModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:UniversityOrganization="http://it.gssi/university_organization/v1">
+  <departments
+      name="Physics"/>
+  <departments
+      name="Computer Science"
+      director="//@facultyMembers.1">
+    <researchGroups
+        name="MDE"
+        openPosition="//@facultyMembers.0/@positions.0"/>
+  </departments>
+  <facultyMembers
+      firstName="Adiel"
+      lastName="TUYISHIME"
+      email="adiel.t@gssi.it"
+      grade="Researcher"
+      department="//@departments.1"
+      researchGroup="//@departments.1/@researchGroups.0">
+    <positions
+        projectTitle="Course MDE"
+        researchGroup="//@departments.1/@researchGroups.0">
+      <guest
+          firstName="Ludovico"
+          lastName="Iovino"
+          email="ludovico.iovino@gssi.it"
+          grade="Researcher"
+          shortBio="Ludovico Iovino received a Computer Science degree (cum laude) and a Ph.D. degree in &quot;Engineering and Computer Science&quot; from the University of L'Aquila (Italy) in 2013 and 2017, respectively. He received, also a master's degree in Web Technology from the same University in 2013. From 2015 to 2022, he worked as a post-doctoral research fellow at the University of L'Aquila (Italy). The interest area is mainly in the Model-Driven Engineering (MDE) field investigating domain-specific modeling languages, model transformations, a chain of model transformations, quality of MDE artifacts, model differencing, and MDE artifacts repositories. Over the last years, he has applied MDE techniques in different application domains like service-based software systems, autonomous systems, support for integration and development of railway signaling functions, and certifiable MDE code generators.&#xD;&#xA;Specifically, he applied MDE techniques in the railway domain to create software artifacts that simulate real-world physical devices from a static (using Ecore's notation, composed of metaclasses, properties, and references) and behavioral (using state machines) point of view. These software artifacts have made it possible to build an application capable of simulating, monitoring, maintaining, and testing these devices in a controlled environment.&#xD;&#xA;Since 2013 Francesco has been actively working on European projects such as FP7 LearnPAd (Model-Based Social Learning for Public Administrations) (EU FP/-ICT2013-11/619583) and EU H2020 TYPHON (Polyglot and Hybrid Persistence Architectures for Big Data Analytics) (Project Number 780251).&#xD;&#xA;He has served as a Program Committee member and is part of different academic projects related to Model Repositories, model migration tools, and Eclipse Plugins.&#xD;&#xA;"
+          affiliation="Gran Sasso Science Institute"
+          inDate="06/06/2023"
+          outDate="06/06/2023"
+          invitingPerson="//@facultyMembers.0"
+          departmentDirector="//@facultyMembers.1">
+        <activity
+            xsi:type="UniversityOrganization:Seminar"
+            eventDate="06/06/2023"
+            topic="Theory and Practice in MDE"
+            venue="Library"
+            time="15:00"
+            remoteLink="https://meet.google.com/bmd-wesv-ues"
+            abstract="Over the last years, several model repositories have been proposed&#xA;in response to the need of the MDE community for advanced systems supporting&#xA;the reuse of modeling artifacts. Modelers can interact with MDE repositories with&#xA;different intents ranging from merely repository browsing, to searching specific&#xA;artifacts satisfying precise requirements. The organization and browsing facilities&#xA;provided by current repositories is limited since they do not produce structured&#xA;overviews of the contained artifacts, and the categorization mechanisms (if any)&#xA;are based on manual activities. When dealing with large numbers of modeling&#xA;artifacts, such limitations increase the effort for managing and reusing artifacts&#xA;stored in model repositories. By focusing on metamodel repositories, in this paper we propose the application of clustering techniques to automatically organize&#xA;stored metamodels and to provide users with overviews of the application domains covered by the available metamodels. The approach has been implemented&#xA;in the MDEForge repository"/>
+        <remuneration
+            travelRefund="300"
+            perDiems="60"
+            hotelPrepaid="true"
+            notes="€300,00"
+            remunerationTotal="300"
+            status="ReadyToBeSent"/>
+      </guest>
+    </positions>
+  </facultyMembers>
+  <facultyMembers
+      firstName="Patrizio"
+      lastName="Pelliccione"
+      email="patrizio.pelliccione@gssi.it"
+      department="//@departments.1"
+      researchGroup="//@departments.1/@researchGroups.0"/>
+</UniversityOrganization:UniversityOrganizationModel>

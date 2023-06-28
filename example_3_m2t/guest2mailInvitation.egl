@@ -1,0 +1,37 @@
+![GSSI logo](https://www.gssi.it/images/logo-gssi-new.png)
+
+TO: 
+Dr. [%=guest.firstName%]
+Via email: [%=guest.email%]
+
+CC:
+[%=guest.departmentDirector.titlePrefix%]. 
+[%=guest.departmentDirector.firstName%] [%=guest.departmentDirector.lastName%]
+Scientific Director of the [%=guest.departmentDirector.department.name%]
+Gran Sasso Science Institute, Italy  
+
+Subject: **Lecture**  
+
+Dear Dr. [%=guest.firstName%],
+following the request of Adiel Tuyishime, approved by Scientific Director 
+of the Computer Science Scientific Area, I am very pleased to invite you 
+to the Gran Sasso Science Institute (GSSI), L'Aquila, Italy, 
+in data [%=guest.activity.first().time%] to run a scientific collaboration 
+on the following topic:
+
+
+**[%=guest.activity.first().topic%]**
+[%=guest.activity.first().abstract%]  
+
+Location: [%=guest.activity.first().venue%]  
+
+
+[%=guest.invitingPerson.firstName%] [%=guest.invitingPerson.lastName%],
+
+
+L'Aquila, [%=currentTime%]. 
+
+
+
+
+

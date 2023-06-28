@@ -1,0 +1,7 @@
+rule Guest2RemunerationTable
+	transform guest : Guest { 
+       // For every Guest in the model ...
+	template : "guest2remunerationTable.egl"
+	target : "gen/" + guest.lastName + "_guest_remunerations.html" 
+}
+
