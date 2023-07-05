@@ -18,7 +18,7 @@ In the following, we present the implemented model management operations to supp
 <p align="justify">The following figure shows the metamodel engineered starting from the domain specification and an exemplary instance regarding the Guest Invitation process of a University</p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png" width="600" height="500">
 
-### Model Transformation
+### 1. Model Transformation
 <p align="justify">
 Model transformations are usually defined with languages and tools allowing to transform a model into another. Transformations can be <b>endogenous</b> or <b>exogenous</b>, depending on the source and target metamodels. In EMF, ATL (Atlas Transformation Language), QVT (Query/View/Transformation), VIATRA (M2M), Epsilon Transformation Language <a href="https://www.eclipse.org/epsilon/doc/etl/">(ETL)</a>, Epsilon Object Language <a href="https://www.eclipse.org/epsilon/doc/eol/">(EOL)</a> are some of the tools that can be used to implement a transformation. ATL, ETL, and VIATRA are declarative rule-based model transformation languages in which transformational mappings are expressed via rules, where the modeler can set source and target metamodel elements. 
 These transformation languages express rules with text-based syntaxes, whereas others use graphical editors to offer an intuitive way of representing rules. In Henshin~\cite{arendt2010henshin}, for instance, objects are referred to as nodes, and links between objects are as edges. 
@@ -26,7 +26,7 @@ These transformation languages express rules with text-based syntaxes, whereas o
 In Fig. \ref{fig:etl-model-to-model-transformation}, the ETL code for the model-to-model transformation generating an instance of the \textsf{Person Remuneration} metamodel starting from the \textsf{Guest Invitation} metamodel.
 </p>
 
-### Model Validation
+### 2. Model Validation
 <p align="justify">
 Data validation within an execution flow provides benefits such as timely error identification, result reliability, prevention of costly errors, improved performance, data security, and enhanced user experience. 
 
@@ -34,18 +34,18 @@ When it comes to the execution flow, incorporating data validation can bring a w
 Data validity checks can be performed in the EMF environment using the Epsilon Validation Language (EVL). Figure \ref{fig:evl-model-validation} shows how two validation rules have been defined in the context of the \textsf{Remuneration} metaclass (line 1), which  verifies if the total amount to be remunerated is positive  (lines 2-5) and if the application status is in the \textsf{ReadyToBeSent} state (lines 7-11). This inhibits the possibility of working remuneration automatically with negative amounts or when the process is not finalized.
 </p>
 
-### Code generation
+### 3. Code generation
 <p align="justify">
 Template-based code generation (TBCG) is a code synthesis technique generating code from templates, which are high-level specifications mixing static parts and dynamic parts that will be filled with variables actualized from models~\cite{SYRIANI201843}. In the MDE ecosystems, some examples of languages and tools can be used as <a href="https://www.eclipse.org/acceleo/">Acceleo</a>, EGL, or <a href="http://wiki.eclipse.org/Xpand">AXPand</a>.
 To obtain the same result in an EMF environment, we use Epsilon's EGL transformation language. It makes use of EGX, which is an EGL template coordination language.
 </p>
 
-### Document generation
+### 4. Document generation
 <p align="justify">
 Document generation is an automation task that can be traced back to code generation since transformations and code generation, in particular, can generate any string or format. Indeed, code generation is also called \emph{Model to Text} transformations. In the MDE ecosystems, we can implement document generation in multiple ways and using multiple languages and tools. Usually, EMF Acceleo or EGL can, as in the previous point, generate documents exactly as we have generated the source code. What changes, in this case, is the format of the generated artifact that it must conform to the technical space.
 </p>
 
-### Interaction with external services
+### 5. Interaction with external services
 <p align="justify">
 To automate the sending of emails to the guest, EOL allows the creation of objects of the underlying programming environment using native types.  For instance,  the EOL excerpt in Fig.~\ref{fig:eol-email-service}  uses an external service to send an email via Java. 
 Lines 3 and 4 refer to the Java class used for sending emails.
@@ -53,7 +53,7 @@ This class provides a basic configuration for SMTP host, port, etc.\footnote{Mor
 This Java class requires the insertion of a username and a password to start sending emails. Once set, the \textsf{sendMail} method (line 6) builds the email by inserting the recipient's email address and defining the mail's subject and message body, which is pre-built in the same way as seen in Fig.~\ref{fig:egl-document-generation}.\footnote{Implementation details can also be seen at this address: \url{https://tinyurl.com/3u84frah}}.
 </p>
 
-### Workflow automation in Epsilon
+### 6. Workflow automation in Epsilon
 <p align="justify">
 When all these artifacts have been developed, model management activities must be combined together to form the entire workflow. The Epsilon framework provides a set of Apache ANT\footnote{\url{https://ant.apache.org/}} tasks for assembling multi-step automated build processes. An excerpt of the ANT script is reported in Fig.~\ref{fig:ant_workflow}.
 </p>
