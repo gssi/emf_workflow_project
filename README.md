@@ -1,4 +1,4 @@
-# Bridging Workflow Automation Tools with EMF Modeling Ecosystems
+# Model Management operations in MDE
 
 This section describes a motivating example and proposes a modeling ecosystem built with Eclipse Epsilon to implement the proposed scenario.
 
