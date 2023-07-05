@@ -17,4 +17,4 @@ In our case study, we use Eclipse modeling framework (EMF)\footnote{\url{https:/
 
 ### Guest Invitation metamodel with an instance model
 
-<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/UniversityOrganization_metamodel_and_model.pdf">
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow">
