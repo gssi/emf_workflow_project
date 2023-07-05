@@ -42,12 +42,13 @@ Data validity checks can be performed in the EMF environment using the Epsilon V
 Template-based code generation (TBCG) is a code synthesis technique generating code from templates, which are high-level specifications mixing static parts and dynamic parts that will be filled with variables actualized from models~\cite{SYRIANI201843}. In the MDE ecosystems, some examples of languages and tools can be used as <a href="https://www.eclipse.org/acceleo/">Acceleo</a>, EGL, or <a href="http://wiki.eclipse.org/Xpand">AXPand</a>.
 To obtain the same result in an EMF environment, we use Epsilon's EGL transformation language. It makes use of EGX, which is an EGL template coordination language.
 </p>
-<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/etl_guest2remuneration.png" >
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/egl_transformation_1.png" >
 
 ### 4. Document generation
 <p align="justify">
 Document generation is an automation task that can be traced back to code generation since transformations and code generation, in particular, can generate any string or format. Indeed, code generation is also called \emph{Model to Text} transformations. In the MDE ecosystems, we can implement document generation in multiple ways and using multiple languages and tools. Usually, EMF Acceleo or EGL can, as in the previous point, generate documents exactly as we have generated the source code. What changes, in this case, is the format of the generated artifact that it must conform to the technical space.
 </p>
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/egl_transformation_2.png" >
 
 ### 5. Interaction with external services
 <p align="justify">
@@ -56,6 +57,7 @@ Lines 3 and 4 refer to the Java class used for sending emails.
 This class provides a basic configuration for SMTP host, port, etc. More details can be seen at the following <a href="https://tinyurl.com/3mjmw5sn">link</a>. 
 This Java class requires the insertion of a username and a password to start sending emails. Once set, the <b><i>{sendMail}</i></b> method (line 6) builds the email by inserting the recipient's email address and defining the mail's subject and message body, which is pre-built in the same way as seen in Fig.~\ref{fig:egl-document-generation}. Implementation details can also be seen at this <a href="https://tinyurl.com/3u84frah">address</a>.
 </p>
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/egl_transformation_2.png" >
 
 ### 6. Workflow automation in Epsilon
 <p align="justify">
