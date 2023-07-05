@@ -22,7 +22,9 @@ In the following, we present the implemented model management operations to supp
 <p align="justify">
 Model transformations are usually defined with languages and tools allowing to transform a model into another. Transformations can be <b>endogenous</b> or <b>exogenous</b>, depending on the source and target metamodels. In EMF, ATL (Atlas Transformation Language), QVT (Query/View/Transformation), VIATRA (M2M), Epsilon Transformation Language <a href="https://www.eclipse.org/epsilon/doc/etl/">(ETL)</a>, Epsilon Object Language <a href="https://www.eclipse.org/epsilon/doc/eol/">(EOL)</a> are some of the tools that can be used to implement a transformation. ATL, ETL, and VIATRA are declarative rule-based model transformation languages in which transformational mappings are expressed via rules, where the modeler can set source and target metamodel elements. 
 These transformation languages express rules with text-based syntaxes, whereas others use graphical editors to offer an intuitive way of representing rules. In Henshin~\cite{arendt2010henshin}, for instance, objects are referred to as nodes, and links between objects are as edges. 
-
+</p>
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/etl_guest2remuneration.png" >
+<p align="justify">
 In Fig. \ref{fig:etl-model-to-model-transformation}, the ETL code for the model-to-model transformation generating an instance of the \textsf{Person Remuneration} metamodel starting from the \textsf{Guest Invitation} metamodel.
 </p>
 
@@ -33,12 +35,14 @@ Data validation within an execution flow provides benefits such as timely error 
 When it comes to the execution flow, incorporating data validation can bring a wide range of advantages. For instance, it can help identify errors in a timely manner which could help prevent costly mistakes down the line. Additionally, it can help ensure the reliability of results, which is critical for many applications or to prevent unexpected behavior. By validating data, the system can ensure that the data it is working with is clean and well-structured. Furthermore, incorporating data validation can enhance the user experience, as it helps ensure the application is intuitive and user-friendly.
 Data validity checks can be performed in the EMF environment using the Epsilon Validation Language (EVL). Figure \ref{fig:evl-model-validation} shows how two validation rules have been defined in the context of the \textsf{Remuneration} metaclass (line 1), which  verifies if the total amount to be remunerated is positive  (lines 2-5) and if the application status is in the \textsf{ReadyToBeSent} state (lines 7-11). This inhibits the possibility of working remuneration automatically with negative amounts or when the process is not finalized.
 </p>
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/evl_validation.png" >
 
 ### 3. Code generation
 <p align="justify">
 Template-based code generation (TBCG) is a code synthesis technique generating code from templates, which are high-level specifications mixing static parts and dynamic parts that will be filled with variables actualized from models~\cite{SYRIANI201843}. In the MDE ecosystems, some examples of languages and tools can be used as <a href="https://www.eclipse.org/acceleo/">Acceleo</a>, EGL, or <a href="http://wiki.eclipse.org/Xpand">AXPand</a>.
 To obtain the same result in an EMF environment, we use Epsilon's EGL transformation language. It makes use of EGX, which is an EGL template coordination language.
 </p>
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/etl_guest2remuneration.png" >
 
 ### 4. Document generation
 <p align="justify">
