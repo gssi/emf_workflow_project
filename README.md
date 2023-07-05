@@ -1,1 +1,1 @@
-# emf_workflow_project
+# Bridging Workflow Automation Tools with EMF Modeling Ecosystems
