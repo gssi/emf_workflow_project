@@ -45,14 +45,14 @@ In this figure, the ETL code for the model-to-model transformation generating an
 Data validation within an execution flow provides benefits such as timely error identification, result reliability, prevention of costly errors, improved performance, data security, and enhanced user experience. 
 
 When it comes to the execution flow, incorporating data validation can bring a wide range of advantages. For instance, it can help identify errors in a timely manner which could help prevent costly mistakes down the line. Additionally, it can help ensure the reliability of results, which is critical for many applications or to prevent unexpected behavior. By validating data, the system can ensure that the data it is working with is clean and well-structured. Furthermore, incorporating data validation can enhance the user experience, as it helps ensure the application is intuitive and user-friendly.
-Data validity checks can be performed in the EMF environment using the Epsilon Validation Language (EVL). Figure \ref{fig:evl-model-validation} shows how two validation rules have been defined in the context of the \textsf{Remuneration} metaclass (line 1), which  verifies if the total amount to be remunerated is positive  (lines 2-5) and if the application status is in the \textsf{ReadyToBeSent} state (lines 7-11). This inhibits the possibility of working remuneration automatically with negative amounts or when the process is not finalized.
+Data validity checks can be performed in the EMF environment using the Epsilon Validation Language (EVL). Fig.4. shows how two validation rules have been defined in the context of the <b><i>Remuneration</i></b> metaclass (line 1), which  verifies if the total amount to be remunerated is positive  (lines 2-5) and if the application status is in the <b><i>ReadyToBeSent</i></b> state (lines 7-11). This inhibits the possibility of working remuneration automatically with negative amounts or when the process is not finalized.
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/evl_validation.png" >
 <p align="center"> Fig.4. ETL Model to Model Transformation</p>
 
 ### 3. Code generation
 <p align="justify">
-Template-based code generation (TBCG) is a code synthesis technique generating code from templates, which are high-level specifications mixing static parts and dynamic parts that will be filled with variables actualized from models~\cite{SYRIANI201843}. In the MDE ecosystems, some examples of languages and tools can be used as <a href="https://www.eclipse.org/acceleo/">Acceleo</a>, EGL, or <a href="http://wiki.eclipse.org/Xpand">AXPand</a>.
+Template-based code generation (TBCG) is a code synthesis technique generating code from templates, which are high-level specifications mixing static parts and dynamic parts that will be filled with variables actualized from models. In the MDE ecosystems, some examples of languages and tools can be used as <a href="https://www.eclipse.org/acceleo/">Acceleo</a>, EGL, or <a href="http://wiki.eclipse.org/Xpand">AXPand</a>.
 To obtain the same result in an EMF environment, we use Epsilon's EGL transformation language. It makes use of EGX, which is an EGL template coordination language.
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/egl_transformation_1.png" >
@@ -60,24 +60,23 @@ To obtain the same result in an EMF environment, we use Epsilon's EGL transforma
 
 ### 4. Document generation
 <p align="justify">
-Document generation is an automation task that can be traced back to code generation since transformations and code generation, in particular, can generate any string or format. Indeed, code generation is also called <b>{Model to Text</b>b> transformations. In the MDE ecosystems, we can implement document generation in multiple ways and using multiple languages and tools. Usually, EMF Acceleo or EGL can, as in the previous point, generate documents exactly as we have generated the source code. What changes, in this case, is the format of the generated artifact that it must conform to the technical space.
+Document generation is an automation task that can be traced back to code generation since transformations and code generation, in particular, can generate any string or format. Indeed, code generation is also called <b>{Model to Text</b> transformations. In the MDE ecosystems, we can implement document generation in multiple ways and using multiple languages and tools. Usually, EMF Acceleo or EGL can, as in the previous point, generate documents exactly as we have generated the source code. What changes, in this case, is the format of the generated artifact that it must conform to the technical space.
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/egl_transformation_2.png" >
 <p align="center"> Fig.6. EMF Document Generation</p>
 
 ### 5. Interaction with external services
 <p align="justify">
-To automate the sending of emails to the guest, EOL allows the creation of objects of the underlying programming environment using native types.  For instance,  the EOL excerpt in Fig.~\ref{fig:eol-email-service}  uses an external service to send an email via Java. 
-Lines 3 and 4 refer to the Java class used for sending emails.
+To automate the sending of emails to the guest, EOL allows the creation of objects of the underlying programming environment using native types.  For instance,  the EOL excerpt in Fig.7.  uses an external service to send an email via Java. Lines 3 and 4 refer to the Java class used for sending emails.
 This class provides a basic configuration for SMTP host, port, etc. More details can be seen at the following <a href="https://tinyurl.com/3mjmw5sn">link</a>. 
-This Java class requires the insertion of a username and a password to start sending emails. Once set, the <b><i>sendMail</i></b> method (line 6) builds the email by inserting the recipient's email address and defining the mail's subject and message body, which is pre-built in the same way as seen in Fig.~\ref{fig:egl-document-generation}. Implementation details can also be seen at this <a href="https://tinyurl.com/3u84frah">address</a>.
+This Java class requires the insertion of a username and a password to start sending emails. Once set, the <b><i>sendMail</i></b> method (line 6) builds the email by inserting the recipient's email address and defining the mail's subject and message body, which is pre-built in the same way as seen in Fig.6. Implementation details can also be seen at this <a href="https://tinyurl.com/3u84frah">address</a>.
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/EOL_mail_service.png" >
 <p align="center"> Fig.7. EOL - Calling External Service for Sending Emails</p>
 
 ### 6. Workflow automation in Epsilon
 <p align="justify">
-When all these artifacts have been developed, model management activities must be combined together to form the entire workflow. The Epsilon framework provides a set of Apache <a href="https://ant.apache.org/">ANT</a> tasks for assembling multi-step automated build processes. An excerpt of the ANT script is reported in Fig.~\ref{fig:ant_workflow}.
+When all these artifacts have been developed, model management activities must be combined together to form the entire workflow. The Epsilon framework provides a set of Apache <a href="https://ant.apache.org/">ANT</a> tasks for assembling multi-step automated build processes. An excerpt of the ANT script is reported in Fig.8.
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png">
 <p align="center"> Fig.8. Excerpt of workflow automation with ANT</p>
@@ -85,8 +84,8 @@ When all these artifacts have been developed, model management activities must b
 <p align="justify">
 Specifically, from line 4 to line 8, the loading of the input model is expected, where some options must be set, such as the <b><i>name</i></b> (line 5), the actual <b><i>modelfile</i></b> (line 6), and the URI of the metamodel to which the model conforms (line 7). Finally, in line 8, it is defined that the input model must read-only <b><i>read="true"</i></b> and must not be modified <b><i>store="false"</i></b>.
 In line 11, the model to be provided as output in the model-to-model transformation of lines 22-26 is also prepared; in this case, the read and write options are <b><i>read="false"</i></b> and <b><i>store="true"</i></b> as the model must be created from scratch.
-The workflow, therefore, involves the validation of the input model. In line 17 the same validation file reported in Fig.~\ref{fig:evl-model-validation} is used.
-Then, the model-to-model transformation is carried out in lines 22-26, with the same transformation seen in Fig.~\ref{fig:etl-model-to-model-transformation}.
-In line 29, through the model-to-code transformation, the invitation email is generated (as seen in Fig.~\ref{fig:egl-model-to-code-transformation}), and finally, through the use of EOL, the external Java service that sends the emails with the input model information, is called.
+The workflow, therefore, involves the validation of the input model. In line 17 the same validation file reported in Fig.4 is used.
+Then, the model-to-model transformation is carried out in lines 22-26, with the same transformation seen in Fig.3.
+In line 29, through the model-to-code transformation, the invitation email is generated (as seen in Fig.5), and finally, through the use of EOL, the external Java service that sends the emails with the input model information, is called.
 </p>
 
