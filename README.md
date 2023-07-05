@@ -22,7 +22,7 @@ In order to fully support the case study specification, we would need to impleme
 <p align="justify">The following figure shows the metamodel engineered starting from the domain specification and an exemplary instance regarding the Guest Invitation process of a University
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/university_organization_metamodel.png" >
-<em align="center">Guest Invitation metamodel with an instance model</em>
+<p><em align="center">Guest Invitation metamodel with an instance model</em> </p>
 
 ### PersonRemuneration Target Metamodel with a model instance
 
