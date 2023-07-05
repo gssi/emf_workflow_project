@@ -23,6 +23,8 @@ In order to fully support the case study specification, we would need to impleme
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/university_organization_metamodel.png" >
 
+### PersonRemuneration Target Metamodel with a model instance
+
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/person_remuneration_metamodel.png" >
 
 ### 1. Model Transformation
