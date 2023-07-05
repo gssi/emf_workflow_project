@@ -16,7 +16,7 @@ In the following, we present the implemented model management operations to supp
 
 ### Guest Invitation metamodel with an instance model
 <p align="justify">The following figure shows the metamodel engineered starting from the domain specification and an exemplary instance regarding the Guest Invitation process of a University</p>
-<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png" width="600" height="500">
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/university_organization_metamodel.png" width="600" height="500">
 
 ### 1. Model Transformation
 <p align="justify">
