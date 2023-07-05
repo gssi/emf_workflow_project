@@ -30,11 +30,11 @@ In order to fully support the case study specification, we would need to impleme
 ### 1. Model Transformation
 <p align="justify">
 Model transformations are usually defined with languages and tools allowing to transform a model into another. Transformations can be <b>endogenous</b> or <b>exogenous</b>, depending on the source and target metamodels. In EMF, ATL (Atlas Transformation Language), QVT (Query/View/Transformation), VIATRA (M2M), Epsilon Transformation Language <a href="https://www.eclipse.org/epsilon/doc/etl/">(ETL)</a>, Epsilon Object Language <a href="https://www.eclipse.org/epsilon/doc/eol/">(EOL)</a> are some of the tools that can be used to implement a transformation. ATL, ETL, and VIATRA are declarative rule-based model transformation languages in which transformational mappings are expressed via rules, where the modeler can set source and target metamodel elements. 
-These transformation languages express rules with text-based syntaxes, whereas others use graphical editors to offer an intuitive way of representing rules. In Henshin~\cite{arendt2010henshin}, for instance, objects are referred to as nodes, and links between objects are as edges. 
+These transformation languages express rules with text-based syntaxes, whereas others use graphical editors to offer an intuitive way of representing rules.
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/etl_guest2remuneration.png" >
 <p align="justify">
-In Fig. \ref{fig:etl-model-to-model-transformation}, the ETL code for the model-to-model transformation generating an instance of the \textsf{Person Remuneration} metamodel starting from the \textsf{Guest Invitation} metamodel.
+In this figure, the ETL code for the model-to-model transformation generating an instance of the <b><i>Person Remuneration</i></b> metamodel starting from the <b><i>Guest Invitation</i></b> metamodel.
 </p>
 
 ### 2. Model Validation
