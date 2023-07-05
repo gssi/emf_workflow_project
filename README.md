@@ -1,6 +1,6 @@
 # Model Management operations in MDE
 
-This section describes a motivating example and proposes a modeling ecosystem built with Eclipse Epsilon to implement the proposed scenario.
+In this section, we illustrate model management operations in MDE using a motivating example.
 
 ## Motivating Example
 
