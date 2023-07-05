@@ -1,4 +1,4 @@
-# Workflow Automation with EMF Modeling Ecosystems
+# Bridging Workflow Automation Tools with EMF Modeling Ecosystems
 
 This section describes a motivating example and proposes a modeling ecosystem built with Eclipse Epsilon to implement the proposed scenario.
 
