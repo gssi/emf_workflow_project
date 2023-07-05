@@ -20,7 +20,7 @@ In the following, we present the implemented model management operations to supp
 
 ### Model Transformation
 <p align="justify">
-Model transformations are usually defined with languages and tools allowing to transform a model into another. Transformations can be **endogenous** or **exogenous**, depending on the source and target metamodels. In EMF, ATL (Atlas Transformation Language), QVT (Query/View/Transformation), VIATRA (M2M), Epsilon Transformation Language (ETL)\footnote{\url{https://www.eclipse.org/epsilon/doc/etl/}}, Epsilon Object Language (EOL)\footnote{\url{https://www.eclipse.org/epsilon/doc/eol/}} are some of the tools that can be used to implement a transformation. ATL, ETL, and VIATRA are declarative rule-based model transformation languages in which transformational mappings are expressed via rules, where the modeler can set source and target metamodel elements. 
+Model transformations are usually defined with languages and tools allowing to transform a model into another. Transformations can be **endogenous** or **exogenous**, depending on the source and target metamodels. In EMF, ATL (Atlas Transformation Language), QVT (Query/View/Transformation), VIATRA (M2M), Epsilon Transformation Language <a href="https://www.eclipse.org/epsilon/doc/etl/">(ETL)</a>, Epsilon Object Language <a href="https://www.eclipse.org/epsilon/doc/eol/">(EOL)</a> are some of the tools that can be used to implement a transformation. ATL, ETL, and VIATRA are declarative rule-based model transformation languages in which transformational mappings are expressed via rules, where the modeler can set source and target metamodel elements. 
 These transformation languages express rules with text-based syntaxes, whereas others use graphical editors to offer an intuitive way of representing rules. In Henshin~\cite{arendt2010henshin}, for instance, objects are referred to as nodes, and links between objects are as edges. 
 
 In Fig. \ref{fig:etl-model-to-model-transformation}, the ETL code for the model-to-model transformation generating an instance of the \textsf{Person Remuneration} metamodel starting from the \textsf{Guest Invitation} metamodel.
@@ -36,7 +36,7 @@ Data validity checks can be performed in the EMF environment using the Epsilon V
 
 ### Code generation
 <p align="justify">
-Template-based code generation (TBCG) is a code synthesis technique generating code from templates, which are high-level specifications mixing static parts and dynamic parts that will be filled with variables actualized from models~\cite{SYRIANI201843}. In the MDE ecosystems, some examples of languages and tools can be used as Acceleo\footnote{\url{https://www.eclipse.org/acceleo/}}, EGL, or XPand\footnote{\url{http://wiki.eclipse.org/Xpand}}.
+Template-based code generation (TBCG) is a code synthesis technique generating code from templates, which are high-level specifications mixing static parts and dynamic parts that will be filled with variables actualized from models~\cite{SYRIANI201843}. In the MDE ecosystems, some examples of languages and tools can be used as <a href="https://www.eclipse.org/acceleo/">Acceleo</a>, EGL, or <a href="http://wiki.eclipse.org/Xpand">AXPand</a>.
 To obtain the same result in an EMF environment, we use Epsilon's EGL transformation language. It makes use of EGX, which is an EGL template coordination language.
 </p>
 
