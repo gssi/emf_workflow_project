@@ -12,7 +12,7 @@ As long as we specify the title of the course, the dates, and an abstract, a web
 ## The proposed modeling ecosystem
 <p align="justify">
 In the following, we present the implemented model management operations to support the described scenario, implemented with a modeling ecosystem.
-In our case study, we use Eclipse modeling framework (EMF)\footnote{\url{https://www.eclipse.org/modeling/emf/}} as IDE and Epsilon\footnote{\url{https://www.eclipse.org/epsilon/}} as the framework to implement the model-to-model transformation expressed with the ETL language, model-to-code, and model-to-text transformations using EGL language. We used EVL\footnote{\url{https://www.eclipse.org/epsilon/doc/evl/}} for validating the models at different stages and EOL\footnote{\url{https://www.eclipse.org/epsilon/doc/eol/}} as a scripting language for interacting with external services. ANT is used for concatenating the various services.
+In our case study, we use Eclipse modeling framework (EMF)(https://www.eclipse.org/modeling/emf/) as IDE and Epsilon\footnote{\url{https://www.eclipse.org/epsilon/}} as the framework to implement the model-to-model transformation expressed with the ETL language, model-to-code, and model-to-text transformations using EGL language. We used EVL\footnote{\url{https://www.eclipse.org/epsilon/doc/evl/}} for validating the models at different stages and EOL\footnote{\url{https://www.eclipse.org/epsilon/doc/eol/}} as a scripting language for interacting with external services. ANT is used for concatenating the various services.
 </p>
 
 ### Guest Invitation metamodel with an instance model
