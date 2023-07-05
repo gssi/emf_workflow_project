@@ -49,13 +49,13 @@ Document generation is an automation task that can be traced back to code genera
 <p align="justify">
 To automate the sending of emails to the guest, EOL allows the creation of objects of the underlying programming environment using native types.  For instance,  the EOL excerpt in Fig.~\ref{fig:eol-email-service}  uses an external service to send an email via Java. 
 Lines 3 and 4 refer to the Java class used for sending emails.
-This class provides a basic configuration for SMTP host, port, etc.\footnote{More details can be seen at the following link: \url{https://tinyurl.com/3mjmw5sn.}} 
-This Java class requires the insertion of a username and a password to start sending emails. Once set, the \textsf{sendMail} method (line 6) builds the email by inserting the recipient's email address and defining the mail's subject and message body, which is pre-built in the same way as seen in Fig.~\ref{fig:egl-document-generation}.\footnote{Implementation details can also be seen at this address: \url{https://tinyurl.com/3u84frah}}.
+This class provides a basic configuration for SMTP host, port, etc. More details can be seen at the following <a href="https://tinyurl.com/3mjmw5sn">link</a> 
+This Java class requires the insertion of a username and a password to start sending emails. Once set, the <b><i>{sendMail}</i></b> method (line 6) builds the email by inserting the recipient's email address and defining the mail's subject and message body, which is pre-built in the same way as seen in Fig.~\ref{fig:egl-document-generation}. Implementation details can also be seen at this <a href="https://tinyurl.com/3u84frah">address</a>.
 </p>
 
 ### 6. Workflow automation in Epsilon
 <p align="justify">
-When all these artifacts have been developed, model management activities must be combined together to form the entire workflow. The Epsilon framework provides a set of Apache ANT\footnote{\url{https://ant.apache.org/}} tasks for assembling multi-step automated build processes. An excerpt of the ANT script is reported in Fig.~\ref{fig:ant_workflow}.
+When all these artifacts have been developed, model management activities must be combined together to form the entire workflow. The Epsilon framework provides a set of Apache <a href="https://ant.apache.org/">ANT</a> tasks for assembling multi-step automated build processes. An excerpt of the ANT script is reported in Fig.~\ref{fig:ant_workflow}.
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png" width="600" height="500">
 <p align="justify">
