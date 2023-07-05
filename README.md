@@ -15,8 +15,14 @@ In the following, we present the implemented model management operations to supp
 </p>
 
 ### Guest Invitation metamodel with an instance model
-<p align="justify">The following figure shows the metamodel engineered starting from the domain specification and an exemplary instance regarding the Guest Invitation process of a University</p>
+<p align="justify">The following figure shows the metamodel engineered starting from the domain specification and an exemplary instance regarding the Guest Invitation process of a University
+</p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/university_organization_metamodel.png" >
+
+<p align="justify">
+In order to fully support the case study specification, we would need to implement a model transformation from the \textsf{Guest Invitation} to the \textsf{PersonRemuneration} metamodel\footnote{We do not report the rest of the toolchain from this metamodel for lack of space.}, a code generator generating web pages for the course/collaboration, a document generator for generating the invitation letter, a script invoking an external Java service for sending emails and finally all the operations must be supported by validation scripts, assuring that the model instances are correct. In the following, we describe each technology used in the modeling ecosystem to support the case study by generally referring to its purpose and reporting the snippet of code/models developed. 
+</p>
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/person_remuneration_metamodel.png" >
 
 ### 1. Model Transformation
 <p align="justify">
@@ -63,7 +69,7 @@ This Java class requires the insertion of a username and a password to start sen
 <p align="justify">
 When all these artifacts have been developed, model management activities must be combined together to form the entire workflow. The Epsilon framework provides a set of Apache <a href="https://ant.apache.org/">ANT</a> tasks for assembling multi-step automated build processes. An excerpt of the ANT script is reported in Fig.~\ref{fig:ant_workflow}.
 </p>
-<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png" width="600" height="500">
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png">
 <p align="justify">
 Specifically, from line 4 to line 8, the loading of the input model is expected, where some options must be set, such as the <b><i>{name}</i></b> (line 5), the actual <b><i>{modelfile}</i></b> (line 6), and the URI of the metamodel to which the model conforms (line 7). Finally, in line 8, it is defined that the input model must read-only <b><i>{read="true"}</i></b> and must not be modified <b><i>{store="false"}</i></b>.
 In line 11, the model to be provided as output in the model-to-model transformation of lines 22-26 is also prepared; in this case, the read and write options are <b><i>{read="false"}</i></b> and <b><i>{store="true"}</i></b> as the model must be created from scratch.
