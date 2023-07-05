@@ -49,7 +49,7 @@ Document generation is an automation task that can be traced back to code genera
 <p align="justify">
 To automate the sending of emails to the guest, EOL allows the creation of objects of the underlying programming environment using native types.  For instance,  the EOL excerpt in Fig.~\ref{fig:eol-email-service}  uses an external service to send an email via Java. 
 Lines 3 and 4 refer to the Java class used for sending emails.
-This class provides a basic configuration for SMTP host, port, etc. More details can be seen at the following <a href="https://tinyurl.com/3mjmw5sn">link</a> 
+This class provides a basic configuration for SMTP host, port, etc. More details can be seen at the following <a href="https://tinyurl.com/3mjmw5sn">link</a>. 
 This Java class requires the insertion of a username and a password to start sending emails. Once set, the <b><i>{sendMail}</i></b> method (line 6) builds the email by inserting the recipient's email address and defining the mail's subject and message body, which is pre-built in the same way as seen in Fig.~\ref{fig:egl-document-generation}. Implementation details can also be seen at this <a href="https://tinyurl.com/3u84frah">address</a>.
 </p>
 
