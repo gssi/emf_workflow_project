@@ -14,14 +14,15 @@ As long as we specify the title of the course, the dates, and an abstract, a web
 In the following, we present the implemented model management operations to support the described scenario, implemented with a modeling ecosystem. In our case study, we use Eclipse modeling framework <a href="https://www.eclipse.org/modeling/emf/">(EMF)</a> as IDE and <a href="https://www.eclipse.org/epsilon/">Epsilon</a> as the framework to implement the model-to-model transformation expressed with the ETL language, model-to-code, and model-to-text transformations using EGL language. We used <a href="https://www.eclipse.org/epsilon/doc/evl/">EVL</a> for validating the models at different stages and  <a href="https://www.eclipse.org/epsilon/doc/eol/">EOL</a> as a scripting language for interacting with external services. ANT is used for concatenating the various services.
 </p>
 
+<p align="justify">
+In order to fully support the case study specification, we would need to implement a model transformation from the  <b><i>Guest Invitation</i></b> to the <b><i>PersonRemuneration</i></b> metamodel (We do not report the rest of the toolchain from this metamodel for lack of space), a code generator generating web pages for the course/collaboration, a document generator for generating the invitation letter, a script invoking an external Java service for sending emails and finally all the operations must be supported by validation scripts, assuring that the model instances are correct. In the following, we describe each technology used in the modeling ecosystem to support the case study by generally referring to its purpose and reporting the snippet of code/models developed. 
+</p>
+
 ### Guest Invitation metamodel with an instance model
 <p align="justify">The following figure shows the metamodel engineered starting from the domain specification and an exemplary instance regarding the Guest Invitation process of a University
 </p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/university_organization_metamodel.png" >
 
-<p align="justify">
-In order to fully support the case study specification, we would need to implement a model transformation from the  <b><i>{Guest Invitation}</i></b> to the <b><i>{PersonRemuneration}</i></b> metamodel (We do not report the rest of the toolchain from this metamodel for lack of space), a code generator generating web pages for the course/collaboration, a document generator for generating the invitation letter, a script invoking an external Java service for sending emails and finally all the operations must be supported by validation scripts, assuring that the model instances are correct. In the following, we describe each technology used in the modeling ecosystem to support the case study by generally referring to its purpose and reporting the snippet of code/models developed. 
-</p>
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/person_remuneration_metamodel.png" >
 
 ### 1. Model Transformation
