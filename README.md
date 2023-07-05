@@ -15,7 +15,7 @@ In the following, we present the implemented model management operations to supp
 </p>
 
 <p align="justify">
-In order to fully support the case study specification, we would need to implement a model transformation from the  <b><i>Guest Invitation</i></b> to the <b><i>PersonRemuneration</i></b> metamodel (We do not report the rest of the toolchain from this metamodel for lack of space), a code generator generating web pages for the course/collaboration, a document generator for generating the invitation letter, a script invoking an external Java service for sending emails and finally all the operations must be supported by validation scripts, assuring that the model instances are correct. In the following, we describe each technology used in the modeling ecosystem to support the case study by generally referring to its purpose and reporting the snippet of code/models developed. 
+In order to fully support the case study specification, we would need to implement a model transformation from the  <b><i>Guest Invitation</i></b> to the <b><i>PersonRemuneration</i></b> metamodel (we do not report the rest of the toolchain from this metamodel for lack of space), a code generator generating web pages for the course/collaboration, a document generator for generating the invitation letter, a script invoking an external Java service for sending emails and finally all the operations must be supported by validation scripts, assuring that the model instances are correct. In the following, we describe each technology used in the modeling ecosystem to support the case study by generally referring to its purpose and reporting the snippet of code/models developed. 
 </p>
 
 ### Guest Invitation metamodel with an instance model
