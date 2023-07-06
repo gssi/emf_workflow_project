@@ -11,7 +11,7 @@ As long as we specify the title of the course, the dates, and an abstract, a web
 
 ## The proposed modeling ecosystem
 <p align="justify">
-In the following, we present the implemented model management operations to support the described scenario, implemented with a modeling ecosystem. In our case study, we use Eclipse modeling framework <a href="https://www.eclipse.org/modeling/emf/">(EMF)</a> as IDE and <a href="https://www.eclipse.org/epsilon/">Epsilon</a> as the framework to implement the model-to-model transformation expressed with the ETL language, model-to-code, and model-to-text transformations using EGL language. We used <a href="https://www.eclipse.org/epsilon/doc/evl/">EVL</a> for validating the models at different stages and  <a href="https://www.eclipse.org/epsilon/doc/eol/">EOL</a> as a scripting language for interacting with external services. ANT is used for concatenating the various services.
+In the following, we present the implemented model management operations to support the described scenario, implemented with a modeling ecosystem. In our case study, we use Eclipse modeling framework <a href="https://www.eclipse.org/modeling/emf/">(EMF)</a> as IDE and <a href="https://www.eclipse.org/epsilon/">Epsilon</a> as the framework to implement the model-to-model transformation expressed with the <a href="https://www.eclipse.org/epsilon/doc/etl/">ETL</a> language, model-to-code, and model-to-text transformations using <a href="https://eclipse.dev/epsilon/doc/egl/">EGL</a> language. We used <a href="https://www.eclipse.org/epsilon/doc/evl/">EVL</a> for validating the models at different stages and  <a href="https://www.eclipse.org/epsilon/doc/eol/">EOL</a> as a scripting language for interacting with external services. ANT is used for concatenating the various services.
 </p>
 
 <p align="justify">
@@ -25,6 +25,9 @@ In order to fully support the case study specification, we would need to impleme
 <p align="center"> Fig.1. Guest Invitation metamodel with an instance model</p>
 
 ### PersonRemuneration Target Metamodel with a model instance
+<p>
+  In the following <b><i>PersonRemuneration Metamodel</i></b>, all the concepts for the system managing the payments are included
+</p>
 
 <img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/person_remuneration_metamodel.png" >
 <p align="center"> Fig.2. PersonRemuneration Target Metamodel with a model instance</p>
