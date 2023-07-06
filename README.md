@@ -1,6 +1,6 @@
 # Model Management operations in MDE
 
-We illustrate model management operations in MDE using a motivating example.
+We illustrate model management operations in Model Driven Engineering (MDE) using a motivating example.
 
 ## Motivating Example
 
