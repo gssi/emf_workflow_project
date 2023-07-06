@@ -1,6 +1,6 @@
 # Model Management operations in MDE
 
-In this section, we illustrate model management operations in MDE using a motivating example.
+We illustrate model management operations in MDE using a motivating example.
 
 ## Motivating Example
 
