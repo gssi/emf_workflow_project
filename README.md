@@ -1,6 +1,6 @@
 # Model Management operations in MDE
 
-We illustrate model management operations in Model Driven Engineering (MDE) using a motivating example.
+Using a motivating example, we illustrate model management operations in Model Driven Engineering (MDE).
 
 ## Motivating Example
 
@@ -15,7 +15,7 @@ In the following, we present the implemented model management operations to supp
 </p>
 
 <p align="justify">
-In order to fully support the case study specification, we would need to implement a model transformation from the  <b><i>Guest Invitation</i></b> to the <b><i>PersonRemuneration</i></b> metamodel (we do not report the rest of the toolchain from this metamodel for lack of space), a code generator generating web pages for the course/collaboration, a document generator for generating the invitation letter, a script invoking an external Java service for sending emails and finally all the operations must be supported by validation scripts, assuring that the model instances are correct. In the following, we describe each technology used in the modeling ecosystem to support the case study by generally referring to its purpose and reporting the snippet of code/models developed. 
+In order to fully support the case study specification, we would need to implement a model transformation from the  <b><i>Guest Invitation</i></b> to the <b><i>PersonRemuneration</i></b> metamodel (we do not report the rest of the toolchain from this metamodel for lack of space), a code generator generating web pages for the course/collaboration, a document generator for generating the invitation letter, a script invoking an external Java service for sending emails and finally all the operations must be supported by validation scripts, assuring that the model instances are correct. In the following, we describe each technology used in the modeling ecosystem to support the case study by referring to its purpose and reporting the snippet of code/models developed. 
 </p>
 
 ### Guest Invitation metamodel with an instance model
@@ -87,6 +87,6 @@ Specifically, from line 4 to line 8, the loading of the input model is expected,
 In line 11, the model to be provided as output in the model-to-model transformation of lines 22-26 is also prepared; in this case, the read and write options are <b><i>read="false"</i></b> and <b><i>store="true"</i></b> as the model must be created from scratch.
 The workflow, therefore, involves the validation of the input model. In line 17 the same validation file reported in Fig.4 is used.
 Then, the model-to-model transformation is carried out in lines 22-26, with the same transformation seen in Fig.3.
-In line 29, through the model-to-code transformation, the invitation email is generated (as seen in Fig.5), and finally, through the use of EOL, the external Java service that sends the emails with the input model information, is called.
+In line 29, through the model-to-code transformation, the invitation email is generated (as seen in Fig.5), and finally, through the use of EOL, the external Java service that sends the emails with the input model information is called.
 </p>
 
