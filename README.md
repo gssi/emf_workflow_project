@@ -79,7 +79,7 @@ This Java class requires the insertion of a username and a password to start sen
 <p align="justify">
 When all these artifacts have been developed, model management activities must be combined together to form the entire workflow. The Epsilon framework provides a set of Apache <a href="https://ant.apache.org/">ANT</a> tasks for assembling multi-step automated build processes. An excerpt of the ANT script is reported in Fig.8.
 </p>
-<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png" height=500>
+<img src="https://github.com/gssi/emf_workflow_project/blob/main/figures/ANT_workflow.png" >
 <p align="center"> Fig.8. Excerpt of workflow automation with ANT</p>
 
 <p align="justify">
